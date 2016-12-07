@@ -239,6 +239,157 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/06/UIImage/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="没米的糠">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="没米的糠">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="没米的糠" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/06/UIImage/" itemprop="url">
+                  UIImage学习总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-06T16:36:05+08:00">
+                2016-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="UIImage学习总结"><a href="#UIImage学习总结" class="headerlink" title="UIImage学习总结"></a>UIImage学习总结</h1><hr>
+<h6 id="转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）"><a href="#转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）" class="headerlink" title="转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）"></a>转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）</h6><p>UIImage <a href="https://developer.apple.com/reference/uikit/uiimage#//apple_ref/occ/clm/UIImage/imageNamed:" target="_blank" rel="external">Apple官方文档</a> </p>
+<hr>
+<p><code>An image object may contain a single image or a sequence of images you intend to use in an animation.</code></p>
+<p>这句话说, 一个 image 对象可以包含一个 image 也可以包含 一组有顺序的 image, 这组有顺序的 image 是用来展示动画的.</p>
+<p>官方给出了 4 个 image 对象的使用方向.</p>
+<ul>
+<li>使用 UIImageView 在 interface 上展示图像;</li>
+<li>可以定制一些系统的 controls, 官方给出的有三个: buttons, sliders, segmented controls;</li>
+<li>直接给 view 或者 other graphics context 绘制图像;</li>
+<li>把图像传递给其他的 APIs 可能需要 图像数据;</li>
+</ul>
+<p>官方给出的 3 种创建方式 </p>
+<ul>
+<li>imageNamed:inBundle:compatibleWithTraitCollection: 或者 imageNamed: 这两个方法, 官方解释: 从 image asset 或者 boundle 里创建一个 image 对象, 会自动缓存图像数据, 对于频繁使用的图像资源, 应该使用此种方式创建.</li>
+<li>imageWithContentsOfFile: 或者 initWithContentsOfFile: 这两个方法, 官方解释: 创建 image 对象的图像资源并没有在工程的 boundle 里面, 所有每次创建都会从 disk 加载图像资源, 不建议使用此方式重复创建相同的 image 对象.</li>
+<li>animatedImageWithImages:duration: 或者 animatedImageNamed:duration: 这两个方法, 官方解释:创建一个 image 对象包含一组有序的 image 对象, 用 UIImageView 呈现动画效果.</li>
+</ul>
+<p>还有一些其它的方法是用来针对一些特殊的资源, 来创建 image 对象. </p>
+<p>官方列举: Core Graphics 或者开发者自己创建的图像资源. 在 UIKit 框架里也可以通过 UIGraphicsGetImageFromCurrentImageContext 方法, 从 bitmap-based 图形上下文中捕获 image.</p>
+<p>官方解释: image 对象是不可变的, 它会根据伴随的图像文件或者图像资源的元数据自动的为 image 对象的大多数属性赋值, 并且这些属性不能被改变. 这种不可变的特性, 也就意味着在任何线程中创建和使用 image 对象都是安全的.</p>
+<p>需要知道的几个名词</p>
+<ul>
+<li>image asset: 管理 images 资源的方式</li>
+<li>assets library: 每一个 Xcode 项目工程里都包含一个资源库, 可以添加重复的 image set</li>
+<li>image set: 包含一个可以发生变异的 image 对象, 可以为不同的平台, 不同的特性环境, 不同的比例因素提供不同版本的 image 对象.</li>
+</ul>
+<p>除了从 disk 加载 image 对象, 还可以通过 UIImagePickerController 从 camera (照相机) 和 photo library (照片库) 获取. 在使用这种方式时, 需要获取用户的权限.</p>
+<p>Stretchable Image 可伸缩 image</p>
+<p>上面说到, image 对象一旦被创建是不可变的, 为什么这里又说可伸缩的 image 呢?<br>官方定义: A stretchable image is one that defines regions where the underlying image data can be duplicated in an aesthetically pleasing way. 意思说, 这个可伸展的 image 是<br>根据美学上以一种更加令人舒适的方式, 从基础的图像资源复制出来的一块区域.(总觉得是把原图复制了一份, 然后做了相应的拉伸调整).</p>
+<p><a href="http://www.jianshu.com/p/a577023677c1" target="_blank" rel="external">resizableImageWithCapInsets:方法的探析</a></p>
+<p>resizableImageWithCapInsets: 或者 resizableImageWithCapInsets:resizingMode:</p>
+<p><a href="http://blog.csdn.net/mamong/article/details/45011009" target="_blank" rel="external">深入理解iOS API系列(二)UIImage的resizableImageWithCapInsets:resizingMode:</a><br><a href="http://blog.csdn.net/cool_bear_xx/article/details/51724797" target="_blank" rel="external">气饱拉伸</a></p>
+<p>image 对象使用 <code>isEqual:</code>判断两个图像资源是不是一样, 不能直接使用 <code>==</code> </p>
+<p>image 对象没有提供直接获取底层图像资源的方法, 但可以用 CGImage 属性或者 CIImage 属性 重新获取一个分别兼容 Core Graphics 和 Core Image 的 image 对象. 也可以使用 <code>UIImagePNGRepresentation</code> 和 <code>UIImageJPEGRepresentation</code> 方法来获取一个包含图像数据的 <code>NSData</code> 对象</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/05/YYImage学习总结/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1037,7 +1188,7 @@ print(&quot;&lt;\((file as NSString).lastPathComponent) : \(line)&gt;, \(method)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

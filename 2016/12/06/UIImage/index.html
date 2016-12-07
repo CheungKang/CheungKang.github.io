@@ -84,30 +84,28 @@
 
 
 
-<meta name="description" content="iOS开发调试技巧总结转载声明:(此文不用于商业目的,只是学习以及整理知识和记录笔记)原文链接 原文链接
-###NSLog打印
+<meta name="description" content="UIImage学习总结
+转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）UIImage Apple官方文档 
 
-  最基础的调试方法, 打印日志. 通过打印出的日志来查看程序运行的路径. 系统NSLog打印的信息较少, 效率较低, 常常使用宏来优化系统的打印方法.
-swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
+An image object may contain a single image or a sequence of images you intend to use in an animation.
+这句话说, 一个 image 对象可以包含一个 image 也可以包含">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS开发调试技巧总结">
-<meta property="og:url" content="http://yoursite.com/2016/09/22/iOS调试技巧/index.html">
+<meta property="og:title" content="UIImage学习总结">
+<meta property="og:url" content="http://yoursite.com/2016/12/06/UIImage/index.html">
 <meta property="og:site_name" content="没米的糠">
-<meta property="og:description" content="iOS开发调试技巧总结转载声明:(此文不用于商业目的,只是学习以及整理知识和记录笔记)原文链接 原文链接
-###NSLog打印
+<meta property="og:description" content="UIImage学习总结
+转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）UIImage Apple官方文档 
 
-  最基础的调试方法, 打印日志. 通过打印出的日志来查看程序运行的路径. 系统NSLog打印的信息较少, 效率较低, 常常使用宏来优化系统的打印方法.
-swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
-<meta property="og:image" content="http://yoursite.com/Users/mfkj/Desktop/640.jpeg">
-<meta property="og:updated_time" content="2016-09-22T14:25:48.000Z">
+An image object may contain a single image or a sequence of images you intend to use in an animation.
+这句话说, 一个 image 对象可以包含一个 image 也可以包含">
+<meta property="og:updated_time" content="2016-12-07T08:17:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS开发调试技巧总结">
-<meta name="twitter:description" content="iOS开发调试技巧总结转载声明:(此文不用于商业目的,只是学习以及整理知识和记录笔记)原文链接 原文链接
-###NSLog打印
+<meta name="twitter:title" content="UIImage学习总结">
+<meta name="twitter:description" content="UIImage学习总结
+转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）UIImage Apple官方文档 
 
-  最基础的调试方法, 打印日志. 通过打印出的日志来查看程序运行的路径. 系统NSLog打印的信息较少, 效率较低, 常常使用宏来优化系统的打印方法.
-swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
-<meta name="twitter:image" content="http://yoursite.com/Users/mfkj/Desktop/640.jpeg">
+An image object may contain a single image or a sequence of images you intend to use in an animation.
+这句话说, 一个 image 对象可以包含一个 image 也可以包含">
 
 
 
@@ -135,13 +133,13 @@ swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/22/iOS调试技巧/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/06/UIImage/"/>
 
 
 
 
 
-  <title> iOS开发调试技巧总结 | 没米的糠 </title>
+  <title> UIImage学习总结 | 没米的糠 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +250,7 @@ swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/22/iOS调试技巧/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/06/UIImage/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="没米的糠">
@@ -276,7 +274,7 @@ swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
             
             
               
-                iOS开发调试技巧总结
+                UIImage学习总结
               
             
           </h1>
@@ -289,8 +287,8 @@ swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-22T11:02:04+08:00">
-                2016-09-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-06T16:36:05+08:00">
+                2016-12-06
               </time>
             
 
@@ -325,48 +323,41 @@ swift版func CKLog&amp;lt;T&amp;gt;(message: T, file: String = #file">
       
 
       
-        <h1 id="iOS开发调试技巧总结"><a href="#iOS开发调试技巧总结" class="headerlink" title="iOS开发调试技巧总结"></a>iOS开发调试技巧总结</h1><h2 id="转载声明-此文不用于商业目的-只是学习以及整理知识和记录笔记-原文链接-原文链接"><a href="#转载声明-此文不用于商业目的-只是学习以及整理知识和记录笔记-原文链接-原文链接" class="headerlink" title="转载声明:(此文不用于商业目的,只是学习以及整理知识和记录笔记)原文链接 原文链接"></a>转载声明:(此文不用于商业目的,只是学习以及整理知识和记录笔记)<a href="http://www.cocoachina.com/ios/20160321/15726.html" target="_blank" rel="external">原文链接</a> <a href="http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&amp;mid=2652547598&amp;idx=1&amp;sn=4a0b6c7bc7feb892ec28b6b67b27ab85&amp;chksm=bcd2ef008ba5661676aed9f71eae901234b5b77f4a530dc0078b711ee3222c1e7859708ed165&amp;scene=1&amp;srcid=0922rUHPejZFBj27JCce96an#rd" target="_blank" rel="external">原文链接</a></h2><blockquote>
-<p>###NSLog打印</p>
-</blockquote>
-<p>  最基础的调试方法, 打印日志. 通过打印出的日志来查看程序运行的路径. 系统<code>NSLog</code>打印的信息较少, 效率较低, 常常使用宏来优化系统的打印方法.</p>
-<h5 id="swift版"><a href="#swift版" class="headerlink" title="swift版"></a>swift版</h5><pre><code>func CKLog&lt;T&gt;(message: T, file: String = #file, method: String = #function, line: Int = #line) {
-#if DEBUG
-print(&quot;&lt;\((file as NSString).lastPathComponent) : \(line)&gt;, \(method)  \(message)&quot;)
-#endif
-}
-</code></pre><h5 id="OC版"><a href="#OC版" class="headerlink" title="OC版"></a>OC版</h5><pre><code>#ifdef DEBUG
-#define CKLog(fmt, ...) NSLog((@&quot;&lt;%s : %d&gt; %s  &quot; fmt), [[[NSString stringWithUTF8String:__FILE__] lastPathComponent]   UTF8String], __LINE__, __PRETTY_FUNCTION__,  ##__VA_ARGS__);
-#else
-#define CKLog(...)
-#endif
-</code></pre><blockquote>
-<p>###断点</p>
-</blockquote>
+        <h1 id="UIImage学习总结"><a href="#UIImage学习总结" class="headerlink" title="UIImage学习总结"></a>UIImage学习总结</h1><hr>
+<h6 id="转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）"><a href="#转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）" class="headerlink" title="转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）"></a>转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）</h6><p>UIImage <a href="https://developer.apple.com/reference/uikit/uiimage#//apple_ref/occ/clm/UIImage/imageNamed:" target="_blank" rel="external">Apple官方文档</a> </p>
+<hr>
+<p><code>An image object may contain a single image or a sequence of images you intend to use in an animation.</code></p>
+<p>这句话说, 一个 image 对象可以包含一个 image 也可以包含 一组有顺序的 image, 这组有顺序的 image 是用来展示动画的.</p>
+<p>官方给出了 4 个 image 对象的使用方向.</p>
 <ul>
-<li>普通断点</li>
+<li>使用 UIImageView 在 interface 上展示图像;</li>
+<li>可以定制一些系统的 controls, 官方给出的有三个: buttons, sliders, segmented controls;</li>
+<li>直接给 view 或者 other graphics context 绘制图像;</li>
+<li>把图像传递给其他的 APIs 可能需要 图像数据;</li>
 </ul>
-<p>断点(Breakpoint):当程序运行到断点处时会暂停运行.</p>
+<p>官方给出的 3 种创建方式 </p>
 <ul>
-<li>条件断点</li>
+<li>imageNamed:inBundle:compatibleWithTraitCollection: 或者 imageNamed: 这两个方法, 官方解释: 从 image asset 或者 boundle 里创建一个 image 对象, 会自动缓存图像数据, 对于频繁使用的图像资源, 应该使用此种方式创建.</li>
+<li>imageWithContentsOfFile: 或者 initWithContentsOfFile: 这两个方法, 官方解释: 创建 image 对象的图像资源并没有在工程的 boundle 里面, 所有每次创建都会从 disk 加载图像资源, 不建议使用此方式重复创建相同的 image 对象.</li>
+<li>animatedImageWithImages:duration: 或者 animatedImageNamed:duration: 这两个方法, 官方解释:创建一个 image 对象包含一组有序的 image 对象, 用 UIImageView 呈现动画效果.</li>
 </ul>
-<p>条件断点是在普通断点的基础上添加了判断条件。当程序执行到断点处，并且满足设置的条件时断点才会有效.</p>
-<p><img src="/Users/mfkj/Desktop/640.jpeg" alt="alt text" title="Title"></p>
-<p>在Edit Edit Breakpoint…窗口中有下面四个输入项：</p>
-<pre><code>1. Condition 设置的条件。
-2. Ignore 表示忽略多少次之后断点有效。例如：不设置条件，Ignore设置为4，则i=4时程序在断点处停止。
-3. Action 在程序断点处执行的操作（执行完这个操作后代码停止运行，此时设置断点处的代码还没有执行）。这里的操作是LLDB语句，关于LLDB会在下面介绍。
-4. Options 当选中时，执行完Action的操作后代码不会停止，就像没有设置断点一样。
-</code></pre><ul>
-<li>异常断点Exception BreakPoint</li>
-</ul>
-<p>在设置异常断点的情况下 当程序crash时 Xcode会帮我们定位到crash产生的位置。</p>
+<p>还有一些其它的方法是用来针对一些特殊的资源, 来创建 image 对象. </p>
+<p>官方列举: Core Graphics 或者开发者自己创建的图像资源. 在 UIKit 框架里也可以通过 UIGraphicsGetImageFromCurrentImageContext 方法, 从 bitmap-based 图形上下文中捕获 image.</p>
+<p>官方解释: image 对象是不可变的, 它会根据伴随的图像文件或者图像资源的元数据自动的为 image 对象的大多数属性赋值, 并且这些属性不能被改变. 这种不可变的特性, 也就意味着在任何线程中创建和使用 image 对象都是安全的.</p>
+<p>需要知道的几个名词</p>
 <ul>
-<li>符号断点Symbolic Breakpoint</li>
+<li>image asset: 管理 images 资源的方式</li>
+<li>assets library: 每一个 Xcode 项目工程里都包含一个资源库, 可以添加重复的 image set</li>
+<li>image set: 包含一个可以发生变异的 image 对象, 可以为不同的平台, 不同的特性环境, 不同的比例因素提供不同版本的 image 对象.</li>
 </ul>
-<p>符号断点能够为某一个方法或者 某一个类的某一个方法设置断点。</p>
-<blockquote>
-<p>###LLDB</p>
-</blockquote>
+<p>除了从 disk 加载 image 对象, 还可以通过 UIImagePickerController 从 camera (照相机) 和 photo library (照片库) 获取. 在使用这种方式时, 需要获取用户的权限.</p>
+<p>Stretchable Image 可伸缩 image</p>
+<p>上面说到, image 对象一旦被创建是不可变的, 为什么这里又说可伸缩的 image 呢?<br>官方定义: A stretchable image is one that defines regions where the underlying image data can be duplicated in an aesthetically pleasing way. 意思说, 这个可伸展的 image 是<br>根据美学上以一种更加令人舒适的方式, 从基础的图像资源复制出来的一块区域.(总觉得是把原图复制了一份, 然后做了相应的拉伸调整).</p>
+<p><a href="http://www.jianshu.com/p/a577023677c1" target="_blank" rel="external">resizableImageWithCapInsets:方法的探析</a></p>
+<p>resizableImageWithCapInsets: 或者 resizableImageWithCapInsets:resizingMode:</p>
+<p><a href="http://blog.csdn.net/mamong/article/details/45011009" target="_blank" rel="external">深入理解iOS API系列(二)UIImage的resizableImageWithCapInsets:resizingMode:</a><br><a href="http://blog.csdn.net/cool_bear_xx/article/details/51724797" target="_blank" rel="external">气饱拉伸</a></p>
+<p>image 对象使用 <code>isEqual:</code>判断两个图像资源是不是一样, 不能直接使用 <code>==</code> </p>
+<p>image 对象没有提供直接获取底层图像资源的方法, 但可以用 CGImage 属性或者 CIImage 属性 重新获取一个分别兼容 Core Graphics 和 Core Image 的 image 对象. 也可以使用 <code>UIImagePNGRepresentation</code> 和 <code>UIImageJPEGRepresentation</code> 方法来获取一个包含图像数据的 <code>NSData</code> 对象</p>
 
       
     </div>
@@ -393,8 +384,8 @@ print(&quot;&lt;\((file as NSString).lastPathComponent) : \(line)&gt;, \(method)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/18/第一篇博客/" rel="next" title="第一篇博客">
-                <i class="fa fa-chevron-left"></i> 第一篇博客
+              <a href="/2016/12/05/YYImage学习总结/" rel="next" title="YYImage学习总结">
+                <i class="fa fa-chevron-left"></i> YYImage学习总结
               </a>
             
           </div>
@@ -402,10 +393,6 @@ print(&quot;&lt;\((file as NSString).lastPathComponent) : \(line)&gt;, \(method)
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/03/MarkDown简单语法/" rel="prev" title="MarkDown简单语法">
-                MarkDown简单语法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -511,7 +498,7 @@ print(&quot;&lt;\((file as NSString).lastPathComponent) : \(line)&gt;, \(method)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS开发调试技巧总结"><span class="nav-number">1.</span> <span class="nav-text">iOS开发调试技巧总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#转载声明-此文不用于商业目的-只是学习以及整理知识和记录笔记-原文链接-原文链接"><span class="nav-number">1.1.</span> <span class="nav-text">转载声明:(此文不用于商业目的,只是学习以及整理知识和记录笔记)原文链接 原文链接</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#swift版"><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">swift版</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#OC版"><span class="nav-number">1.1.0.0.2.</span> <span class="nav-text">OC版</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UIImage学习总结"><span class="nav-number">1.</span> <span class="nav-text">UIImage学习总结</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">转载声明（本文不用于商业目的，只做学习以及整理知识和记录笔记）</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
